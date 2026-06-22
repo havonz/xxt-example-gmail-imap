@@ -1,0 +1,490 @@
+query	targets
+find image	screen.find_image,ImageObject:find_image,image.load_file
+image matching	screen.find_image,ImageObject:find_image,ImageObject:cv_find_image
+template matching	ImageObject:cv_detect_templates,ImageObject:cv_find_image
+get color	screen.get_color,screen.get_color_rgb,ImageObject:get_color
+find color	screen.find_color,ImageObject:find_color
+multi-point color	screen.is_colors,ImageObject:is_colors,screen.find_color
+screenshot	screen.image
+screen image	screen.image,screen.keep,screen.unkeep
+OCR	screen.ocr_text,ImageObject:ocr_text,ImageObject:apple_ocr,ImageObject:paddle_ocr
+Apple OCR	ImageObject:apple_ocr,image.vision_supported_recognition_languages
+Paddle OCR	ImageObject:paddle_ocr,screen.ocr_text
+text recognition	screen.ocr_text,ImageObject:ocr_text,ImageObject:apple_ocr,ImageObject:paddle_ocr,ddddocr,paddleocr_onnx,references/third-party/ddddocr.md,references/third-party/paddleocr_onnx.md
+dm	references/api/dm.md
+matrix dictionary	dm,references/api/dm.md
+matrix OCR	dm.Ocr,references/api/dm.md
+dm OCR	dm.Ocr,references/api/dm.md
+dm FindStr	dm.FindStr,references/api/dm.md
+FindStr	dm.FindStr,references/api/dm.md
+FindMatrix	dm.FindMatrix,references/api/dm.md
+LoadDict	dm.LoadDict,references/api/dm.md
+UseDict	dm.UseDict,references/api/dm.md
+QR code	ImageObject:qr_decode,utils.qr_encode
+image crop	ImageObject:crop
+image resize	ImageObject:cv_resize
+image save	ImageObject:save_to_png_file,ImageObject:save_to_jpeg_file,ImageObject:save_to_album
+image binarization	ImageObject:binaryzation,ImageObject:cv_binaryzation
+color replacement	ImageObject:replace_color
+contour detection	ImageObject:cv_find_shapes,ImageObject:cv_to_shapes
+tap	touch.tap
+touch tap	touch.tap
+touch control	touch.on,touch.move,touch.off,TouchObject:move,TouchObject:off,TouchObject:msleep,TouchObject:step_delay,TouchObject:step_len
+swipe	touch.on,touch.move,touch.off,TouchObject:move,TouchObject:off,TouchObject:step_delay,TouchObject:step_len
+precise swipe	samples-1,touch.on,TouchObject:move,TouchObject:step_delay,TouchObject:step_len
+avoid inertia	samples-1,touch.on,TouchObject:move,TouchObject:step_delay,TouchObject:step_len
+long press	touch.on,TouchObject:msleep,TouchObject:off
+key	key.down,key.up,key.press
+key code	key.down,key.up,key.press
+shortcut	key.down,key.up,key.press
+key chord	key.down,key.up,key.press
+phone event	xxtouch.call_callback,thread.register_event
+incoming call	xxtouch.call_callback
+Activator	xxtouch.activator_callback,thread.register_event
+HID event	xxtouch.hid_event,thread.register_event
+input text	sys.input_text,key.send_text
+keyboard input	sys.input_text,key.send_text
+wait	sys.msleep,TouchObject:msleep
+delay	sys.msleep,TouchObject:msleep
+pressure	TouchObject:press
+3D Touch	TouchObject:press
+log	nLog,sys.log,print.out
+toast	sys.toast,sys.alert
+alert	sys.alert,dialog
+input box	sys.input_box,Dialog:add_input
+dialog	dialog,Dialog:show,Dialog:load
+XUI dialog	dialog,references/api/Dialog.xui.md,Dialog:add_button,Dialog:add_group,Dialog:reload
+picker	Dialog:add_picker
+radio	Dialog:add_radio
+checkbox	Dialog:add_checkbox
+switch control	Dialog:add_switch
+configuration UI	dialog,Dialog:show,Dialog:load
+XPP configuration UI	references/xpp.md,references/xui-format.md,xui.show,xui.setup,xui.get,xui.set,xui.read,xui.write,xui.clear
+XUI	references/xui-format.md,references/api/Dialog.xui.md,xui.show,xui.setup,xui.dismiss,xui.reload,xui.clear,xui.get,xui.set,xui.read,xui.write
+XUI dialog engine	references/api/Dialog.xui.md,dialog.engine
+XUI format	references/xui-format.md
+XUI example	references/xui-format.md
+XUI entry	references/xui/README.md,references/xui-format.md
+XUI root structure	references/xui/format.md
+XUI theme	references/xui/format.md
+XUI config persistence	references/xui/format.md,references/api/xui.md
+XUI internal API	references/xui/format.md
+XUI component	references/xui/modules.md
+XUI module	references/xui/modules.md
+XUI Button	references/xui/modules.md
+XUI Link	references/xui/modules.md
+XUI Group	references/xui/modules.md
+XUI Switch	references/xui/modules.md
+XUI TextField	references/xui/modules.md
+XUI Textarea	references/xui/modules.md
+XUI Option	references/xui/modules.md
+XUI MultipleOption	references/xui/modules.md
+XUI OrderedOption	references/xui/modules.md
+XUI Segment	references/xui/modules.md
+XUI Radio	references/xui/modules.md
+XUI Checkbox	references/xui/modules.md
+XUI Slider	references/xui/modules.md
+XUI Stepper	references/xui/modules.md
+XUI DateTime	references/xui/modules.md
+XUI EditableList	references/xui/modules.md
+XUI File	references/xui/modules.md
+XUI TitleValue	references/xui/modules.md,references/xui/snippets.md
+XUI snippet	references/xui/snippets.md
+XUI Snippet	references/xui/snippets.md
+snippet selector	references/xui/snippets.md,references/xui/modules.md
+.xui	references/xui-format.md,xui.show,xui.setup
+.xuic	references/xui-format.md,xui.show,xui.setup
+A-Script-Bundle	references/xui-format.md
+XXT project	references/xxt.md
+single-script project	references/xxt.md
+lua/scripts/main.lua	references/xxt.md
+XXT_RES_PATH	references/api/xxt.env.md,references/xxt.md
+XXT_HOME_PATH	references/api/xxt.env.md,references/xxt.md
+XXT path variables	references/api/xxt.env.md
+XXT environment paths	references/api/xxt.env.md
+IS_TROLLSTORE_EDITION	references/api/xxt.env.md
+有根	rootful,references/api/xxt.env.md
+无根	rootless,references/api/xxt.env.md
+隐根	roothide,references/api/xxt.env.md
+巨魔版	TrollStore edition,references/api/xxt.env.md
+alerthelper	references/api/alerthelper.md
+AlertHelper	references/api/alerthelper.md
+system alert automation	references/api/alerthelper.md
+human assist	references/human-assist.md
+assist task	references/human-assist.md
+.tmp/xxtouch-ai	references/human-assist.md
+project detection	scripts/inspect_project.py,references/xxt.md,references/xpp.md
+inspect_project	scripts/inspect_project.py,references/xxt.md,references/xpp.md
+initialize assist flow	scripts/init_assist_flow.py,references/human-assist.md
+init_assist_flow	scripts/init_assist_flow.py,references/human-assist.md
+merge assist result	scripts/merge_assist_result.py,references/human-assist.md
+merge_assist_result	scripts/merge_assist_result.py,references/human-assist.md
+.config.ignores	scripts/ensure_config_ignores.py,references/human-assist.md
+buildIgnores	scripts/ensure_config_ignores.py,references/human-assist.md
+clean screenshots	scripts/clean_assist_workspace.py,references/human-assist.md
+color-point conversion	references/human-assist.md,scripts/assist_points_to_lua.py
+color sample result	references/human-assist.md,scripts/assist_points_to_lua.py
+assist_points_to_lua	scripts/assist_points_to_lua.py,references/human-assist.md
+rectangle selection	scripts/assist_rect_to_lua.py,references/human-assist.md
+region conversion	scripts/assist_rect_to_lua.py,references/human-assist.md
+assist_rect_to_lua	scripts/assist_rect_to_lua.py,references/human-assist.md
+matrix conversion	scripts/assist_matrix_to_lua.py,references/human-assist.md,references/api/dm.md
+assist_matrix_to_lua	scripts/assist_matrix_to_lua.py,references/human-assist.md,references/api/dm.md
+flow rendering	scripts/render_flow.py,references/human-assist.md,references/xxtdo-patterns.md
+render_flow	scripts/render_flow.py,references/human-assist.md,references/xxtdo-patterns.md
+install XXTDo	scripts/install_xxtdo.py,references/xxtdo.md,references/xxt.md,references/xpp.md
+install_xxtdo	scripts/install_xxtdo.py,references/xxtdo.md,references/xxt.md,references/xpp.md
+xxt_assist_create_task	references/human-assist.md
+xxt_assist_wait_result	references/human-assist.md
+XPP project	references/xpp.md,xpp.info,xpp.bundle_path,xpp.resource_path
+script package structure	references/xpp.md,xpp.info,xpp.resource_path
+Info.lua	references/xpp.md,xpp.info
+BundleIdentifier	references/xpp.md,xpp.info
+Executable	references/xpp.md,xpp.info
+MainInterfaceFile	references/xpp.md,references/xui-format.md,xui.show,xui.setup
+webview	webview.show,webview.eval,webview.frame,webview.hide,webview.destroy,webview.samples
+web panel	webview.show,webview.eval,webview.frame,webview.samples
+app	app.run,app.close,app.quit,app.front_bid
+open app	app.run,app.open_url
+close app	app.close,app.quit
+frontmost app	app.front_bid,app.front_pid
+bundle id	app.front_bid,app.bundles,app.pid_for_bid
+app path	app.bundle_path,app.data_path,app.group_info
+install IPA	app.install
+uninstall app	app.uninstall
+permission	app.set_tcc,app.notification_permissions,app.local_network_permissions
+privacy	sys.user_tracking,sys.personalized_advertising,sys.location_services,references/api/sys.privacy.md
+tracking	sys.user_tracking,sys.set_user_tracking
+personalized ads	sys.personalized_advertising,sys.set_personalized_advertising
+advertising	sys.personalized_advertising,sys.set_personalized_advertising
+location services	sys.location_services,sys.set_location_services
+location	sys.location_services,sys.set_location_services
+app permissions	app.notification_permissions,app.local_network_permissions,references/api/app.permissions.md
+notification permissions	app.notification_permissions
+local network permissions	app.local_network_permissions
+local network	app.local_network_permissions
+notification	app.pop_banner
+clear app	clear.app_data,clear.caches
+keychain	clear.keychain,clear.all_keychain
+IDFA	clear.idfav
+photo album	clear.all_photos,utils.video_to_album
+clipboard	pasteboard.read,pasteboard.write,pasteboard.clear,pasteboard.write_items
+ui_element	ui_element,references/third-party/ui_element.md
+UI element	ui_element,references/third-party/ui_element.md
+element selector	ui_element,references/third-party/ui_element.md
+element action	ui_element,references/third-party/ui_element.md
+device_ui_element_snapshot	references/third-party/ui_element.md
+device_ui_element_query	references/third-party/ui_element.md
+device_ui_element_action	references/third-party/ui_element.md
+JSON	json.encode,json.decode,json.null
+Plist	plist.read,plist.write,plist.load,plist.dump,plist.data_convert
+NSKeyedArchiver	plist.data_convert,references/api/plist.md
+CF$UID	plist.data_convert,references/api/plist.md
+binary plist	plist.data_convert,references/api/plist.md
+XML	slaxml,slaxdom,references/third-party/slaxml.md
+SLAXML	slaxml,slaxdom,references/third-party/slaxml.md
+YAML	lyaml,references/third-party/lyaml.md
+lyaml	lyaml,references/third-party/lyaml.md
+file	file.exists,file.reads,file.writes,file.list
+file read/write	file.reads,file.writes,file.appends
+directory	file.list,file.mkdir_p,file.currentdir,file.chdir
+copy move	file.copy,file.move,file.remove
+compress	file.zip,file.unzip
+decompress	file.unzip
+hash	file.md5,file.sha1,string.md5,string.sha1
+Base64	string.base64_encode,string.base64_decode
+URI	string.encode_uri,string.decode_uri,string.encode_uri_component,string.decode_uri_component
+GBK	string.from_gbk
+string	string.split,string.trim,string.starts_with,string.ends_with
+HTTP	http.get,http.post,http.table_to_form_urlencoded,http.download
+GET	http.get
+POST	http.post
+download	http.get,http.download,ftp.download
+upload	ftp.upload,http.post
+form	http.table_to_form_urlencoded
+FTP	ftp.download,ftp.upload
+Socket	socket
+TCP	socket
+UDP	socket
+WebSocket	websocket
+database	sqlite3
+SQLite	sqlite3
+LuaCJSON	cjson,json.encode,json.decode
+LuaSocket	socket
+lua-openssl	openssl,references/third-party/lua-openssl.md,references/third-party/lua-openssl-reference.md
+OpenSSL	openssl,references/third-party/lua-openssl-reference.md
+encryption	openssl,references/third-party/lua-openssl-reference.md,string.aes128_encrypt,string.aes128_decrypt
+HMAC	openssl,references/third-party/lua-openssl-reference.md,string.hmac_sha1,string.hmac_sha256
+AES	openssl,references/third-party/lua-openssl-reference.md
+RSA	openssl,references/third-party/lua-openssl-reference.md
+X509	openssl,references/third-party/lua-openssl-reference.md
+certificate	openssl,references/third-party/lua-openssl-reference.md
+sign verify	openssl,references/third-party/lua-openssl-reference.md
+cffi-lua	ffi,references/third-party/cffi-lua.md,references/third-party/cffi-lua-reference.md
+FFI	ffi,references/third-party/cffi-lua-reference.md
+C library	ffi,references/third-party/cffi-lua-reference.md
+lobjc	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+Objective-C	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+OC	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+objc	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+objc.methodimp	references/third-party/lobjc-objc-bridge.md
+UIKit	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+Foundation	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+private API	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+fork_dostring	references/third-party/lobjc.md
+subprocess execution	references/third-party/lobjc.md
+lfs	lfs,file.attrs,file.list
+POSIX	posix,unix
+device	device.type,device.name,device.udid,device.serial_number
+device info	device.type,device.name,device.udid,device.serial_number,device.ifaddrs
+battery	device.battery_level,device.battery_state
+brightness	device.brightness,device.set_brightness
+volume	device.set_volume
+lock screen	device.lock_screen,device.is_screen_locked,device.unlock_screen
+unlock	device.unlock_screen
+orientation lock	device.is_orien_locked,device.lock_orien,device.unlock_orien
+screen orientation	device.front_orien,screen.init,screen.rotate_xy,screen.unrotate_xy
+screen size	screen.size,screen.scale_factor
+airplane mode	device.turn_on_airplane,device.turn_off_airplane
+WiFi	device.turn_on_wifi,device.turn_off_wifi,device.join_wifi,device.forget_wifi,device.wifi_info
+cellular data	device.turn_on_data,device.turn_off_data
+Bluetooth	device.turn_on_bluetooth,device.turn_off_bluetooth
+VPN	device.is_vpn_on,device.turn_on_vpn,device.turn_off_vpn,vpnconf.connect,vpnconf.disconnect,vpnconf.status
+flashlight	device.flash_on,device.flash_off
+vibration	device.vibrator
+play sound	device.play_sound
+auto-lock	device.set_autolock_time,device.reset_idle
+reduce motion	device.reduce_motion_on,device.reduce_motion_off
+AssistiveTouch	device.assistive_touch_on,device.assistive_touch_off
+process	app.all_procs,sys.kill,sys.killall,proc_get,proc_put
+shared state	proc_get,proc_put,proc_dict_run
+queue	proc_queue_push,proc_queue_pop,proc_queue_read,proc_queue_size,proc_queue_clear
+thread	thread.dispatch,thread.wait,thread.kill,sys.task,thread.samples
+event listener	thread.register_event,thread.unregister_event,thread.samples
+restart script	os.restart
+exit script	os.exit
+script arguments	utils.launch_args
+script package	xpp.bundle_path,xpp.resource_path,xpp.info
+contacts	utils.add_contacts,utils.remove_all_contacts
+time	utils.date_from_format,utils.date_to_format,utils.date_from_rfc1123,utils.date_from_rfc3339,utils.date_to_rfc1123,utils.date_to_rfc3339,sys.mtime,sys.net_time
+OTP	utils.totp_next,utils.hotp_counter,utils.hotp_next
+TOTP	utils.totp_next
+HOTP	utils.hotp_counter,utils.hotp_next
+one-time password	utils.totp_next,utils.hotp_counter,utils.hotp_next
+authenticator code	utils.totp_next,utils.hotp_counter,utils.hotp_next
+random	sys.rnd,string.random,utils.gen_uuid
+CoreML	coreml,coreml.new_model_request,coreml.new_vision_request,coreml.compile_model
+MLMultiArray	coreml.multi.array.module,references/api/coreml.multi.array.module.md
+text tokenization	coreml.tokenizer.module,references/api/coreml.tokenizer.module.md
+ONNX	onnxruntime,onnxruntime.session.module,onnxruntime.tensor.module
+ONNXRuntime	onnxruntime,onnxruntime.session.module,onnxruntime.tensor.module
+ORT	onnxruntime,onnxruntime.session.module,onnxruntime.tensor.module
+ORT tensor	onnxruntime.tensor.module,references/api/onnxruntime.tensor.module.md
+image.cv	image.cv,references/api/image.cv.md
+cv.mat	cv.mat,references/api/image.cv.md
+OpenCV	image.cv,cv.mat,references/api/image.cv.md
+OpenCV matrix	cv.mat,references/api/image.cv.md
+opencv matrix	cv.mat,references/api/image.cv.md
+cv.from_image	image.cv,cv.from_image,references/api/image.cv.md
+cv.to_image	image.cv,cv.to_image,references/api/image.cv.md
+captcha_recognizer	captcha_recognizer,references/third-party/captcha_recognizer.md
+ddddocr	ddddocr,references/third-party/ddddocr.md
+paddleocr_onnx	paddleocr_onnx,references/third-party/paddleocr_onnx.md
+PaddleOCR	paddleocr_onnx,references/third-party/paddleocr_onnx.md
+yolo_onnx	yolo_onnx,references/third-party/yolo_onnx.md
+yolo_coreml	yolo_coreml,references/third-party/yolo_coreml.md
+YOLO	yolo_onnx,yolo_coreml,references/third-party/yolo_onnx.md,references/third-party/yolo_coreml.md
+captcha recognition	captcha_recognizer,ddddocr,references/third-party/captcha_recognizer.md,references/third-party/ddddocr.md
+slider captcha	captcha_recognizer,ddddocr,references/third-party/captcha_recognizer.md,references/third-party/ddddocr.md
+slider matching	ddddocr,references/third-party/ddddocr.md
+object detection	ddddocr,paddleocr_onnx,yolo_onnx,yolo_coreml,references/third-party/ddddocr.md,references/third-party/paddleocr_onnx.md,references/third-party/yolo_onnx.md,references/third-party/yolo_coreml.md
+XXTDo	references/xxtdo.md,references/xxtdo-patterns.md
+XXTDo.lua	references/xxtdo.md,references/xxtdo-patterns.md
+use XXTDo	references/xxtdo.md,references/xxtdo-patterns.md,references/xxt.md,references/xpp.md
+state machine	references/xxtdo-patterns.md
+screen state	references/xxtdo-patterns.md,screen.is_colors
+找图	screen.find_image,ImageObject:find_image,image.load_file
+图片匹配	screen.find_image,ImageObject:find_image,ImageObject:cv_find_image
+模板匹配	ImageObject:cv_detect_templates,ImageObject:cv_find_image
+取色	screen.get_color,screen.get_color_rgb,ImageObject:get_color
+找色	screen.find_color,ImageObject:find_color
+多点找色	screen.is_colors,ImageObject:is_colors,screen.find_color
+截图	screen.image
+屏幕图像	screen.image,screen.keep,screen.unkeep
+文字识别	screen.ocr_text,ImageObject:ocr_text,ImageObject:apple_ocr,ImageObject:paddle_ocr,ddddocr,paddleocr_onnx,references/third-party/ddddocr.md,references/third-party/paddleocr_onnx.md
+Apple文字识别	ImageObject:apple_ocr,image.vision_supported_recognition_languages
+Paddle文字识别	ImageObject:paddle_ocr,screen.ocr_text
+点阵字库	dm,references/api/dm.md
+字库OCR	dm.Ocr,references/api/dm.md
+点阵OCR	dm.Ocr,references/api/dm.md
+dm找字	dm.FindStr,references/api/dm.md
+二维码	ImageObject:qr_decode,utils.qr_encode
+图片裁剪	ImageObject:crop
+图片缩放	ImageObject:cv_resize
+图片保存	ImageObject:save_to_png_file,ImageObject:save_to_jpeg_file,ImageObject:save_to_album
+图片二值化	ImageObject:binaryzation,ImageObject:cv_binaryzation
+颜色替换	ImageObject:replace_color
+轮廓检测	ImageObject:cv_find_shapes,ImageObject:cv_to_shapes
+点击	touch.tap
+轻触	touch.tap
+触控	touch.on,touch.move,touch.off,TouchObject:move,TouchObject:off,TouchObject:msleep,TouchObject:step_delay,TouchObject:step_len
+滑动	touch.on,touch.move,touch.off,TouchObject:move,TouchObject:off,TouchObject:step_delay,TouchObject:step_len
+精确滑动	samples-1,touch.on,TouchObject:move,TouchObject:step_delay,TouchObject:step_len
+防惯性	samples-1,touch.on,TouchObject:move,TouchObject:step_delay,TouchObject:step_len
+长按	touch.on,TouchObject:msleep,TouchObject:off
+按键	key.down,key.up,key.press
+键码	key.down,key.up,key.press
+快捷键	key.down,key.up,key.press
+组合键	key.down,key.up,key.press
+电话事件	xxtouch.call_callback,thread.register_event
+来电	xxtouch.call_callback
+HID事件	xxtouch.hid_event,thread.register_event
+输入文字	sys.input_text,key.send_text
+输入法	sys.input_text,key.send_text
+等待	sys.msleep,TouchObject:msleep
+延迟	sys.msleep,TouchObject:msleep
+压力	TouchObject:press
+日志	nLog,sys.log,print.out
+提示	sys.toast,sys.alert
+弹窗	sys.alert,dialog
+输入框	sys.input_box,Dialog:add_input
+对话框	dialog,Dialog:show,Dialog:load
+XUI对话框	dialog,references/api/Dialog.xui.md,Dialog:add_button,Dialog:add_group,Dialog:reload
+XUI 对话框	dialog,references/api/Dialog.xui.md,Dialog:add_button,Dialog:add_group,Dialog:reload
+选择器	Dialog:add_picker
+单选	Dialog:add_radio
+多选	Dialog:add_checkbox
+开关控件	Dialog:add_switch
+配置界面	dialog,Dialog:show,Dialog:load
+XPP配置界面	references/xpp.md,references/xui-format.md,xui.show,xui.setup,xui.get,xui.set,xui.read,xui.write,xui.clear
+XPP 配置界面	references/xpp.md,references/xui-format.md,xui.show,xui.setup,xui.get,xui.set,xui.read,xui.write,xui.clear
+XUI 格式	references/xui-format.md
+XUI 示例	references/xui-format.md
+XUI 入口	references/xui/README.md,references/xui-format.md
+XUI 根结构	references/xui/format.md
+XUI 主题	references/xui/format.md
+XUI 配置保存	references/xui/format.md,references/api/xui.md
+XUI 内部 API	references/xui/format.md
+XUI 组件	references/xui/modules.md
+XUI 模块	references/xui/modules.md
+代码片段选择器	references/xui/snippets.md,references/xui/modules.md
+XXT项目	references/xxt.md
+单脚本项目	references/xxt.md
+XXT路径变量	references/api/xxt.env.md
+内置路径变量	references/api/xxt.env.md
+自动处理弹窗	references/api/alerthelper.md
+系统弹窗自动化	references/api/alerthelper.md
+弹窗助手	references/api/alerthelper.md
+人工辅助	references/human-assist.md
+辅助任务	references/human-assist.md
+项目识别	scripts/inspect_project.py,references/xxt.md,references/xpp.md
+初始化辅助流程	scripts/init_assist_flow.py,references/human-assist.md
+合并辅助结果	scripts/merge_assist_result.py,references/human-assist.md
+清理截图	scripts/clean_assist_workspace.py,references/human-assist.md
+点色转换	references/human-assist.md,scripts/assist_points_to_lua.py
+取色结果	references/human-assist.md,scripts/assist_points_to_lua.py
+框选区域	scripts/assist_rect_to_lua.py,references/human-assist.md
+区域转换	scripts/assist_rect_to_lua.py,references/human-assist.md
+点阵转换	scripts/assist_matrix_to_lua.py,references/human-assist.md,references/api/dm.md
+矩阵转换	scripts/assist_matrix_to_lua.py,references/human-assist.md,references/api/dm.md
+流程渲染	scripts/render_flow.py,references/human-assist.md,references/xxtdo-patterns.md
+安装XXTDo	scripts/install_xxtdo.py,references/xxtdo.md,references/xxt.md,references/xpp.md
+XPP项目	references/xpp.md,xpp.info,xpp.bundle_path,xpp.resource_path
+脚本包结构	references/xpp.md,xpp.info,xpp.resource_path
+网页面板	webview.show,webview.eval,webview.frame,webview.samples
+应用	app.run,app.close,app.quit,app.front_bid
+打开应用	app.run,app.open_url
+关闭应用	app.close,app.quit
+前台应用	app.front_bid,app.front_pid
+包名	app.front_bid,app.bundles,app.pid_for_bid
+应用路径	app.bundle_path,app.data_path,app.group_info
+安装IPA	app.install
+卸载应用	app.uninstall
+权限	app.set_tcc,app.notification_permissions,app.local_network_permissions
+隐私	sys.user_tracking,sys.personalized_advertising,sys.location_services,references/api/sys.privacy.md
+跟踪	sys.user_tracking,sys.set_user_tracking
+个性化广告	sys.personalized_advertising,sys.set_personalized_advertising
+广告	sys.personalized_advertising,sys.set_personalized_advertising
+定位服务	sys.location_services,sys.set_location_services
+定位	sys.location_services,sys.set_location_services
+应用权限	app.notification_permissions,app.local_network_permissions,references/api/app.permissions.md
+通知权限	app.notification_permissions
+本地网络权限	app.local_network_permissions
+本地网络	app.local_network_permissions
+通知	app.pop_banner
+清理应用	clear.app_data,clear.caches
+钥匙串	clear.keychain,clear.all_keychain
+相册	clear.all_photos,utils.video_to_album
+剪贴板	pasteboard.read,pasteboard.write,pasteboard.clear,pasteboard.write_items
+文件	file.exists,file.reads,file.writes,file.list
+文件读写	file.reads,file.writes,file.appends
+目录	file.list,file.mkdir_p,file.currentdir,file.chdir
+复制移动	file.copy,file.move,file.remove
+压缩	file.zip,file.unzip
+解压	file.unzip
+哈希	file.md5,file.sha1,string.md5,string.sha1
+字符串	string.split,string.trim,string.starts_with,string.ends_with
+下载	http.get,http.download,ftp.download
+上传	ftp.upload,http.post
+表单	http.table_to_form_urlencoded
+界面元素	ui_element,references/third-party/ui_element.md
+元素定位	ui_element,references/third-party/ui_element.md
+元素点击	ui_element,references/third-party/ui_element.md
+元素输入	ui_element,references/third-party/ui_element.md
+元素抓取	device_ui_element_snapshot,references/third-party/ui_element.md
+数据库	sqlite3
+归档plist	plist.data_convert,references/api/plist.md
+XML解析	slaxml,slaxdom,references/third-party/slaxml.md
+YAML读写	lyaml,references/third-party/lyaml.md
+加密	openssl,references/third-party/lua-openssl-reference.md,string.aes128_encrypt,string.aes128_decrypt
+证书	openssl,references/third-party/lua-openssl-reference.md
+签名验签	openssl,references/third-party/lua-openssl-reference.md
+C库	ffi,references/third-party/cffi-lua-reference.md
+私有API	objc,references/third-party/lobjc.md,references/third-party/lobjc-objc-bridge.md
+子进程执行	references/third-party/lobjc.md
+设备	device.type,device.name,device.udid,device.serial_number
+设备信息	device.type,device.name,device.udid,device.serial_number,device.ifaddrs
+电量	device.battery_level,device.battery_state
+亮度	device.brightness,device.set_brightness
+音量	device.set_volume
+锁屏	device.lock_screen,device.is_screen_locked,device.unlock_screen
+解锁	device.unlock_screen
+旋转锁	device.is_orien_locked,device.lock_orien,device.unlock_orien
+屏幕方向	device.front_orien,screen.init,screen.rotate_xy,screen.unrotate_xy
+屏幕尺寸	screen.size,screen.scale_factor
+飞行模式	device.turn_on_airplane,device.turn_off_airplane
+蜂窝数据	device.turn_on_data,device.turn_off_data
+蓝牙	device.turn_on_bluetooth,device.turn_off_bluetooth
+闪光灯	device.flash_on,device.flash_off
+振动	device.vibrator
+播放声音	device.play_sound
+自动锁屏	device.set_autolock_time,device.reset_idle
+减少动态效果	device.reduce_motion_on,device.reduce_motion_off
+进程	app.all_procs,sys.kill,sys.killall,proc_get,proc_put
+共享状态	proc_get,proc_put,proc_dict_run
+队列	proc_queue_push,proc_queue_pop,proc_queue_read,proc_queue_size,proc_queue_clear
+线程	thread.dispatch,thread.wait,thread.kill,sys.task,thread.samples
+事件监听	thread.register_event,thread.unregister_event,thread.samples
+重启脚本	os.restart
+退出脚本	os.exit
+脚本参数	utils.launch_args
+脚本包	xpp.bundle_path,xpp.resource_path,xpp.info
+联系人	utils.add_contacts,utils.remove_all_contacts
+时间	utils.date_from_format,utils.date_to_format,utils.date_from_rfc1123,utils.date_from_rfc3339,utils.date_to_rfc1123,utils.date_to_rfc3339,sys.mtime,sys.net_time
+OTP	utils.totp_next,utils.hotp_counter,utils.hotp_next
+TOTP	utils.totp_next
+HOTP	utils.hotp_counter,utils.hotp_next
+一次性验证码	utils.totp_next,utils.hotp_counter,utils.hotp_next
+动态验证码	utils.totp_next,utils.hotp_counter,utils.hotp_next
+随机	sys.rnd,string.random,utils.gen_uuid
+文本分词	coreml.tokenizer.module,references/api/coreml.tokenizer.module.md
+ORT张量	onnxruntime.tensor.module,references/api/onnxruntime.tensor.module.md
+OpenCV矩阵	cv.mat,references/api/image.cv.md
+opencv矩阵	cv.mat,references/api/image.cv.md
+验证码识别	captcha_recognizer,ddddocr,references/third-party/captcha_recognizer.md,references/third-party/ddddocr.md
+滑块识别	captcha_recognizer,ddddocr,references/third-party/captcha_recognizer.md,references/third-party/ddddocr.md
+滑块匹配	ddddocr,references/third-party/ddddocr.md
+目标检测	ddddocr,paddleocr_onnx,yolo_onnx,yolo_coreml,references/third-party/ddddocr.md,references/third-party/paddleocr_onnx.md,references/third-party/yolo_onnx.md,references/third-party/yolo_coreml.md
+使用XXTDo	references/xxtdo.md,references/xxtdo-patterns.md,references/xxt.md,references/xpp.md
+状态机	references/xxtdo-patterns.md
+界面状态	references/xxtdo-patterns.md,screen.is_colors

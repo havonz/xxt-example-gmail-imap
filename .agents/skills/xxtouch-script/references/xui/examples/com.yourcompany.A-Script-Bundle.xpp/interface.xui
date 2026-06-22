@@ -1,0 +1,165 @@
+return {
+    title = "Script Settings";
+    header = "Script Configuration";
+    subheader = "Changes are saved to this script package's configuration domain.";
+    defaults = "com.yourcompany.A-Script-Bundle";
+    theme = {
+        style = "Grouped";
+        tintColor = "#0A84FF";
+        navigationTitleColor = "#111827";
+    };
+    items = {
+        {
+            cell = "Group";
+            label = "General";
+        };
+        {
+            cell = "Switch";
+            label = "Enable Auto Run";
+            key = "auto_run";
+            default = true;
+            icon = "res/16.png";
+        };
+        {
+            cell = "TextField";
+            label = "Account";
+            key = "username";
+            default = "";
+            keyboard = "Default";
+            alignment = "Right";
+            placeholder = "Enter account";
+            validationRegex = "^[0-9A-Za-z_]+$";
+        };
+        {
+            cell = "TextField";
+            label = "Retry Count";
+            key = "retry_count";
+            default = "3";
+            keyboard = "NumberPad";
+            alignment = "Right";
+            validationRegex = "^[0-9]+$";
+        };
+        {
+            cell = "Slider";
+            label = "Delay Seconds";
+            key = "delay_seconds";
+            default = 0.5;
+            min = 0;
+            max = 3;
+            step = 0.1;
+            showValue = true;
+        };
+        {
+            cell = "Stepper";
+            label = "Max Rounds";
+            key = "max_rounds";
+            default = 5;
+            min = 1;
+            max = 20;
+            step = 1;
+            isInteger = true;
+        };
+        {
+            cell = "Group";
+            label = "Mode";
+        };
+        {
+            cell = "Option";
+            label = "Run Mode";
+            key = "mode";
+            default = "normal";
+            options = {
+                { title = "Slow"; value = "slow"; shortTitle = "Slow" };
+                { title = "Standard"; value = "normal"; shortTitle = "Standard" };
+                { title = "Fast"; value = "fast"; shortTitle = "Fast" };
+            };
+        };
+        {
+            cell = "MultipleOption";
+            label = "Enabled Features";
+            key = "features";
+            default = { "log" };
+            maxCount = 2;
+            options = {
+                { title = "Logs"; value = "log"; icon = "res/green.png" };
+                { title = "Screenshots"; value = "screenshot"; icon = "res/blue.png" };
+                { title = "Notifications"; value = "notify"; icon = "res/red.png" };
+            };
+            footerText = "Select up to two items";
+        };
+        {
+            cell = "OrderedOption";
+            label = "Step Order";
+            key = "steps";
+            default = { "prepare"; "run" };
+            minCount = 1;
+            maxCount = 3;
+            options = {
+                { title = "Prepare"; value = "prepare" };
+                { title = "Run"; value = "run" };
+                { title = "Cleanup"; value = "cleanup" };
+            };
+        };
+        {
+            cell = "Segment";
+            label = "Log Level";
+            key = "log_level";
+            default = "info";
+            options = {
+                { title = "Low"; value = "warn" };
+                { title = "Medium"; value = "info" };
+                { title = "High"; value = "debug" };
+            };
+        };
+        {
+            cell = "Checkbox";
+            key = "notify_channels";
+            default = { "toast" };
+            maxCount = 2;
+            options = {
+                { title = "Alert"; value = "alert" };
+                { title = "Toast"; value = "toast" };
+                { title = "Log"; value = "log" };
+            };
+        };
+        {
+            cell = "Radio";
+            key = "environment";
+            default = "prod";
+            options = {
+                { title = "Test"; value = "test" };
+                { title = "Production"; value = "prod" };
+            };
+        };
+        {
+            cell = "EditableList";
+            label = "Allowlist";
+            key = "allow_list";
+            default = {};
+            maxCount = 10;
+            validationRegex = "^[0-9A-Za-z_.-]+$";
+        };
+        {
+            cell = "Group";
+            label = "More";
+        };
+        {
+            cell = "Link";
+            label = "Advanced Settings";
+            url = "sub/xui-sub.xui";
+        };
+        {
+            cell = "Button";
+            label = "Open Help";
+            action = "OpenURL:";
+            args = {
+                url = "https://example.com/help";
+            };
+        };
+        {
+            cell = "StaticText";
+            label = "After configuration is saved, the script will read these values the next time it runs.";
+            selectable = true;
+        };
+    };
+}

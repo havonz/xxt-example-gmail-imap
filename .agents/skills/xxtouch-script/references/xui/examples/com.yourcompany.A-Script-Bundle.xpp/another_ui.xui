@@ -1,0 +1,23 @@
+return {
+    title = "Additional Settings";
+    header = "Additional Settings";
+    subheader = "The same script package can contain multiple XUI files.";
+    defaults = "com.yourcompany.A-Script-Bundle";
+    theme = {
+        navigationBarColor = "#F9FAFB";
+        navigationTitleColor = "#111827";
+    };
+    items = {
+        {
+            cell = "Group";
+            label = "Switches";
+        };
+        {
+            cell = "Switch";
+            label = "Enable Additional Feature";
+            key = "extra_enabled";
+            default = false;
+            icon = "res/16.png";
+        };
+    };
+}

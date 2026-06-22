@@ -1,0 +1,12 @@
+return {
+    name = "Select App";
+    arguments = {
+        {
+            type = "app";
+            default = xui.get("com.yourcompany.A-Script-Bundle", "target_app");
+        };
+    };
+    generator = function(bundle_id)
+        return bundle_id
+    end;
+}

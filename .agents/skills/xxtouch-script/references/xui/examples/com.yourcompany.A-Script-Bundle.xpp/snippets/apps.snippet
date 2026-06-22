@@ -1,0 +1,12 @@
+return {
+    name = "Select Multiple Apps";
+    arguments = {
+        {
+            type = "apps";
+            default = xui.get("com.yourcompany.A-Script-Bundle", "target_apps");
+        };
+    };
+    generator = function(bundle_ids)
+        return bundle_ids
+    end;
+}

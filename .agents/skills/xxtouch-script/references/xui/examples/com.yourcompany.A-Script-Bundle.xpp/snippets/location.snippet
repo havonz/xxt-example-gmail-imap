@@ -1,0 +1,13 @@
+return {
+    name = "Select Location";
+    arguments = {
+        {
+            type = "loc";
+            subtitle = "Select a location";
+            default = xui.get("com.yourcompany.A-Script-Bundle", "target_location");
+        };
+    };
+    generator = function(location)
+        return location
+    end;
+}

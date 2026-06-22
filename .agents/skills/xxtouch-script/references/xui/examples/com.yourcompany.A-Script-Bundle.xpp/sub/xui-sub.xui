@@ -1,0 +1,99 @@
+return {
+    title = "Advanced Settings";
+    defaults = "com.yourcompany.A-Script-Bundle";
+    items = {
+        {
+            cell = "Group";
+            label = "Images";
+        };
+        {
+            cell = "Image";
+            path = "res/logo.png";
+            height = 128;
+        };
+        {
+            cell = "AnimatedImage";
+            path = "res/demo.gif";
+            height = 160;
+        };
+        {
+            cell = "Group";
+            label = "Selectors";
+        };
+        {
+            cell = "TitleValue";
+            label = "Version";
+            value = "1.0.0";
+        };
+        {
+            cell = "TitleValue";
+            label = "Target App";
+            key = "target_app";
+            snippet = "snippets/app.snippet";
+        };
+        {
+            cell = "TitleValue";
+            label = "Multiple Apps";
+            key = "target_apps";
+            snippet = "snippets/apps.snippet";
+        };
+        {
+            cell = "TitleValue";
+            label = "Location";
+            key = "target_location";
+            snippet = "snippets/location.snippet";
+        };
+        {
+            cell = "TitleValue";
+            label = "Key";
+            key = "target_key";
+            snippet = "snippets/key.snippet";
+        };
+        {
+            cell = "TitleValue";
+            label = "Vision Test";
+            key = "vision_points";
+            snippet = "snippets/test.snippet";
+        };
+        {
+            cell = "File";
+            key = "data_file";
+            initialPath = "res";
+            allowedExtensions = { "json"; "txt"; "lua" };
+            label = "Select Data File";
+        };
+        {
+            cell = "Group";
+            label = "Time";
+        };
+        {
+            cell = "DateTime";
+            key = "start_at";
+            mode = "datetime";
+            minuteInterval = 5;
+        };
+        {
+            cell = "Group";
+            label = "Actions";
+        };
+        {
+            cell = "Button";
+            action = "LaunchScript:";
+            label = "Run Helper Script";
+            args = {
+                path = "sub/xui-script.lua";
+            };
+        };
+        {
+            cell = "Group";
+            label = "Notes";
+        };
+        {
+            cell = "Textarea";
+            key = "note";
+            label = "Notes";
+            default = "";
+            maxLength = 200;
+        };
+    };
+}

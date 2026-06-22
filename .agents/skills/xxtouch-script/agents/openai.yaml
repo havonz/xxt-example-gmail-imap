@@ -1,0 +1,7 @@
+interface:
+  display_name: "XXTouch Script"
+  short_description: "Write or review XXTouch Lua scripts and XPP XUI config UIs."
+  default_prompt: "Use $xxtouch-script for XXTouch Lua script or XPP XUI config UI work."
+
+policy:
+  allow_implicit_invocation: true

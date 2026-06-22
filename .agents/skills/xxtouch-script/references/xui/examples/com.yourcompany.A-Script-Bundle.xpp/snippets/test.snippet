@@ -1,0 +1,13 @@
+return {
+    name = "Vision Selector Test";
+    arguments = {
+        { type = "pos"; title = "Pick Point"; subtitle = "Select one coordinate" };
+        { type = "color"; title = "Pick Color"; subtitle = "Select one color" };
+        { type = "poscolor"; title = "Point Color"; subtitle = "Select one coordinate and color" };
+        { type = "poscolors"; title = "Multi-Point Colors"; subtitle = "Select multiple coordinate and color groups" };
+        { type = "rect"; title = "Region"; subtitle = "Select one rectangular region" };
+    };
+    generator = function(...)
+        return { ... }
+    end;
+}

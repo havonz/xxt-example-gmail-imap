@@ -1,0 +1,240 @@
+symbols	file	brief
+XXT_HOME_PATH,XXT_BIN_PATH,XXT_LUA_PATH,XXT_LIB_PATH,XXT_RES_PATH,XXT_LOG_PATH,XXT_TESSDATA_PATH,XXT_SCRIPTS_PATH,IS_TROLLSTORE_EDITION	references/api/xxt.env.md	XXTouch built-in environment variables
+xxtouch.activator_callback	references/api/xxtouch.activator_callback.md	Activator callback
+alerthelper,alerthelper.setRules,alerthelper.clearRules,alerthelper.plainPattern,alerthelper.equalPattern	references/api/alerthelper.md	Auto-handle system alert dialogs
+app.all_procs,app.front_bid,app.front_pid,app.pid_for_bid,app.is_running	references/api/app.processes.md	App processes/frontmost/running state
+app.bundle_path	references/api/app.bundle_path.md	App bundle path
+app.bundles	references/api/app.bundles.md	App BID list
+app.run,app.close,app.quit	references/api/app.lifecycle.md	Launch/close apps
+app.data_path	references/api/app.data_path.md	App data path
+app.group_info	references/api/app.group_info.md	App group information
+app.install,app.uninstall	references/api/app.install.md	Install/uninstall apps
+app.localized_name	references/api/app.localized_name.md	Localized name
+app.lsof	references/api/app.lsof.md	App open files
+app.open_url	references/api/app.open_url.md	Open URL
+app.notification_permissions,app.local_network_permissions	references/api/app.permissions.md	App notification and Local Network permissions
+app.plugin_info	references/api/app.plugin_info.md	App plugin information
+app.png_data_for_bid	references/api/app.png_data_for_bid.md	App icon data
+app.pop_banner	references/api/app.pop_banner.md	App notification
+app.set_tcc	references/api/app.set_tcc.md	App TCC permissions
+app.used_memory	references/api/app.used_memory.md	App memory
+xxtouch.call_callback	references/api/xxtouch.call_callback.md	Phone call callback
+clear.keychain,clear.all_keychain	references/api/clear.keychain.md	Clear keychain
+clear.all_photos	references/api/clear.all_photos.md	Clear local photo library
+clear.app_data	references/api/clear.app_data.md	Clear app data
+clear.caches	references/api/clear.caches.md	Clear system caches
+clear.cookies	references/api/clear.cookies.md	Clear cookies
+clear.idfav	references/api/clear.idfav.md	Clear IDFA/V
+coreml	references/api/coreml.module.md	CoreML module overview
+coreml.compile_model	references/api/coreml.compile_model.md	Compile CoreML model locally
+coreml.model.request.object.methods	references/api/coreml.model.request.object.methods.md	CoreML request object methods
+coreml.multi.array.module	references/api/coreml.multi.array.module.md	MLMultiArray tensor module
+coreml.new_model_request	references/api/coreml.new_model_request.md	CoreML generic predictor
+coreml.new_vision_request	references/api/coreml.new_vision_request.md	CoreML vision predictor
+coreml.tokenizer.module	references/api/coreml.tokenizer.module.md	Text tokenizer module
+coreml.vision.request.object:predict	references/api/coreml.vision.request.object.predict.md	CoreML image prediction
+device.assistive_touch_on,device.assistive_touch_off	references/api/device.assistive_touch.md	Turn AssistiveTouch on/off
+device.battery_level	references/api/device.battery_level.md	Battery level
+device.battery_state	references/api/device.battery_state.md	Charging state
+device.brightness,device.set_brightness	references/api/device.brightness.md	Read/set backlight brightness
+device.flash_on,device.flash_off	references/api/device.flash.md	Flashlight switch
+device.forget_wifi	references/api/device.forget_wifi.md	Forget Wi-Fi
+device.front_orien	references/api/device.front_orien.md	Frontmost screen orientation
+device.ifaddrs	references/api/device.ifaddrs.md	Interface IP addresses
+device.is_orien_locked,device.lock_orien,device.unlock_orien	references/api/device.orientation_lock.md	Orientation lock
+device.lock_screen,device.is_screen_locked,device.unlock_screen	references/api/device.screen_lock.md	Lock screen/status/unlock
+device.turn_on_wifi,device.turn_off_wifi,device.turn_on_data,device.turn_off_data,device.turn_on_bluetooth,device.turn_off_bluetooth,device.turn_on_airplane,device.turn_off_airplane,device.is_vpn_on,device.turn_on_vpn,device.turn_off_vpn	references/api/device.network_switches.md	Network switches
+device.join_wifi	references/api/device.join_wifi.md	Join Wi-Fi
+device.name,device.set_name	references/api/device.name.md	Read/set device name
+device.play_sound	references/api/device.play_sound.md	Play sound in background
+device.reduce_motion_on,device.reduce_motion_off	references/api/device.reduce_motion.md	Reduce Motion
+device.reset_idle	references/api/device.reset_idle.md	Reset auto-lock idle timer
+device.serial_number	references/api/device.serial_number.md	Device serial number
+device.set_autolock_time	references/api/device.set_autolock_time.md	Set auto-lock time
+device.set_volume	references/api/device.set_volume.md	Set volume
+device.type	references/api/device.type.md	Device type
+device.udid	references/api/device.udid.md	Device UDID
+device.vibrator	references/api/device.vibrator.md	Vibrate device
+device.wifi_info	references/api/device.wifi_info.md	Current Wi-Fi
+device.wifi_mac	references/api/device.wifi_mac.md	Wi-Fi MAC
+dialog	references/api/dialog.md	Dialog object
+dm,dm.SetPath,dm.SetDict,dm.LoadDict,dm.UseDict,dm.Ocr,dm.FindStr,dm.FindMatrix	references/api/dm.md	Matrix OCR/text search
+Dialog:add_checkbox	references/api/Dialog.add_checkbox.md	Dialog checkbox
+Dialog:add_button,Dialog:add_group,Dialog:reload,Dialog:set_close_title,Dialog:set_submit_title,dialog.engine	references/api/Dialog.xui.md	XUI dialog engine
+Dialog:add_image	references/api/Dialog.add_image.md	Dialog image
+Dialog:add_input	references/api/Dialog.add_input.md	Dialog input
+Dialog:add_label	references/api/Dialog.add_label.md	Dialog label
+Dialog:add_picker	references/api/Dialog.add_picker.md	Dialog picker
+Dialog:add_radio	references/api/Dialog.add_radio.md	Dialog radio
+Dialog:add_range	references/api/Dialog.add_range.md	Dialog numeric range
+Dialog:add_switch	references/api/Dialog.add_switch.md	Dialog switch
+Dialog:load	references/api/Dialog.load.md	Load configuration
+Dialog:set_config	references/api/Dialog.set_config.md	Dialog configuration name
+Dialog:set_corner_radius	references/api/Dialog.set_corner_radius.md	Dialog corner radius
+Dialog:set_frame	references/api/Dialog.set_frame.md	Dialog position and size
+Dialog:set_size	references/api/Dialog.set_size.md	Dialog size
+Dialog:set_timeout	references/api/Dialog.set_timeout.md	Dialog timeout
+Dialog:set_title	references/api/Dialog.set_title.md	Dialog title
+Dialog:show	references/api/Dialog.show.md	Show and return selections
+file.appends	references/api/file.appends.md	Append to file
+file.attrs	references/api/file.attrs.md	File attributes
+file.chdir	references/api/file.chdir.md	Change working directory
+file.copy	references/api/file.copy.md	Copy file/directory
+file.currentdir	references/api/file.currentdir.md	Current working directory
+file.exists	references/api/file.exists.md	Existence check
+file.find	references/api/file.find.md	Find file/directory
+file.get_line,file.get_lines,file.set_line,file.set_lines,file.insert_line,file.insert_lines,file.remove_line,file.line_count	references/api/file.lines.md	Read/write/insert/delete/count text lines
+file.lattrs	references/api/file.lattrs.md	Symlink attributes
+file.link	references/api/file.link.md	Create file link
+file.list	references/api/file.list.md	Directory file list
+file.md5	references/api/file.md5.md	File MD5
+file.mkdir_p	references/api/file.mkdir_p.md	Create directories recursively
+file.move	references/api/file.move.md	Move file/directory
+file.reads	references/api/file.reads.md	Read file
+file.remove	references/api/file.remove.md	Delete file/directory
+file.sha1	references/api/file.sha1.md	File SHA1
+file.size	references/api/file.size.md	File size
+file.touch	references/api/file.touch.md	Update file timestamp
+file.zip,file.unzip	references/api/file.zip.md	Create/extract ZIP archives
+file.writes	references/api/file.writes.md	Overwrite file
+ftp.download,ftp.upload	references/api/ftp.transfer.md	FTP upload/download
+get_elapsed_ms	references/api/get_elapsed_ms.md	Script elapsed milliseconds
+xxtouch.hid_event	references/api/xxtouch.hid_event.md	HID event message
+http.delete	references/api/http.delete.md	DELETE request
+http.download	references/api/http.download.md	HTTP file download (deprecated; prefer http.get)
+http.get	references/api/http.get.md	GET request
+http.head	references/api/http.head.md	HEAD request
+http.post	references/api/http.post.md	POST request
+http.put	references/api/http.put.md	PUT request
+http.table_to_form_urlencoded	references/api/http.table_to_form_urlencoded.md	URL-encoded form encoding
+image.is	references/api/image.is.md	ImageObject check
+image.load_data	references/api/image.load_data.md	Create image from data
+image.load_file	references/api/image.load_file.md	Create image from file
+image.vision_supported_recognition_languages	references/api/image.vision_supported_recognition_languages.md	Apple Vision OCR languages
+image.cv,cv.mat,cv.from_image,cv.to_image,cv.cvt_color,cv.threshold,cv.find_contours,cv.match_template,cv.min_max_loc	references/api/image.cv.md	OpenCV-style image matrix processing
+image.new	references/api/image.new.md	Blank image
+image.new_text_image	references/api/image.new_text_image.md	Text image
+image.oper_merge	references/api/image.oper_merge.md	Image merge
+ImageObject:binaryzation	references/api/ImageObject.binaryzation.md	Image binarization
+ImageObject:copy	references/api/ImageObject.copy.md	Image copy
+ImageObject:crop	references/api/ImageObject.crop.md	Image crop
+ImageObject:cv_binaryzation	references/api/ImageObject.cv_binaryzation.md	cv auto-binarization
+ImageObject:cv_compare_image	references/api/ImageObject.cv_compare_image.md	cv image comparison
+ImageObject:cv_detect_templates	references/api/ImageObject.cv_detect_templates.md	cv multi-template detection
+ImageObject:cv_find_image	references/api/ImageObject.cv_find_image.md	cv image search
+ImageObject:cv_find_shapes	references/api/ImageObject.cv_find_shapes.md	cv contour search
+ImageObject:cv_resize	references/api/ImageObject.cv_resize.md	cv resize
+ImageObject:cv_to_shapes	references/api/ImageObject.cv_to_shapes.md	cv convert to contours
+ImageObject:destroy	references/api/ImageObject.destroy.md	Destroy image
+ImageObject:draw_image	references/api/ImageObject.draw_image.md	Draw image onto image
+ImageObject:find_color	references/api/ImageObject.find_color.md	Find color in image
+ImageObject:find_image	references/api/ImageObject.find_image.md	Find image in image
+ImageObject:get_color	references/api/ImageObject.get_color.md	Get image color
+ImageObject:is_colors	references/api/ImageObject.is_colors.md	Multi-point color match in image
+ImageObject:jpeg_data,ImageObject:png_data,ImageObject:save_to_album,ImageObject:save_to_jpeg_file,ImageObject:save_to_png_file	references/api/ImageObject.export.md	Image encoding/export
+ImageObject:apple_ocr	references/api/ImageObject.apple_ocr.md	Apple Vision OCR
+ImageObject:ocr_text	references/api/ImageObject.ocr_text.md	Image OCR
+ImageObject:paddle_ocr	references/api/ImageObject.paddle_ocr.md	PaddleLite OCR
+ImageObject:qr_decode	references/api/ImageObject.qr_decode.md	QR code decode
+ImageObject:replace_color	references/api/ImageObject.replace_color.md	Color replacement
+ImageObject:set_color	references/api/ImageObject.set_color.md	Set pixel color
+ImageObject:size	references/api/ImageObject.size.md	Image size
+ImageObject:turn_left	references/api/ImageObject.turn_left.md	Rotate left 90 degrees
+ImageObject:turn_right	references/api/ImageObject.turn_right.md	Rotate right 90 degrees
+jbroot,rootfs	references/api/rootfs.md	Convert system root/jailbreak root paths
+json.decode,json.encode,json.null	references/api/json.md	JSON encode/decode/null
+key.down,key.up,key.press	references/api/key.down.up.press.md	Keys/chords/key codes
+key.send_text	references/api/key.send_text.md	Type text
+nLog	references/api/nLog.md	Network log
+onnxruntime	references/api/onnxruntime.module.md	ONNX Runtime module overview
+onnxruntime.session.module	references/api/onnxruntime.session.module.md	ONNX Runtime session module
+onnxruntime.tensor.module	references/api/onnxruntime.tensor.module.md	ONNX Runtime tensor module
+os.exit,os.restart	references/api/os.lifecycle.md	Exit/restart script
+pasteboard.read,pasteboard.write,pasteboard.write_items,pasteboard.clear	references/api/pasteboard.md	Clipboard read/write/clear
+plist.load,plist.read,plist.write,plist.dump,plist.data_convert	references/api/plist.md	Property list read/write/convert
+print,print.out	references/api/print.md	Print buffer read/write
+proc_dict_run	references/api/proc_dict_run.md	Process dictionary transaction
+proc_get	references/api/proc_get.md	Read process dictionary
+proc_put	references/api/proc_put.md	Write process dictionary
+proc_queue_push,proc_queue_push_back,proc_queue_push_front,proc_queue_pop,proc_queue_pop_front,proc_queue_pop_back,proc_queue_pop_value,proc_queue_count_value,proc_queue_read,proc_queue_clear,proc_queue_size	references/api/proc_queue.md	Process queue read/write/pop/count
+register_atexit	references/api/register_atexit.md	Register exit callback
+samples-1	references/api/samples-1.md	Touch examples/precise swipe
+screen.find_color	references/api/screen.find_color.md	Multi-point similarity color search
+screen.find_image	references/api/screen.find_image.md	Screen image search
+screen.get_color,screen.get_color_rgb	references/api/screen.get_color.md	Screen color/RGB
+screen.image	references/api/screen.image.md	Screen image
+screen.init	references/api/screen.init.md	Initialize rotated coordinates
+screen.is_colors	references/api/screen.is_colors.md	Screen multi-point color match
+screen.keep,screen.unkeep	references/api/screen.keep.md	Keep/unkeep screen
+screen.ocr_text	references/api/screen.ocr_text.md	Recognize text in screen region
+screen.rotate_xy,screen.unrotate_xy	references/api/screen.rotate_xy.md	Coordinate rotation/reverse conversion
+screen.scale_factor	references/api/screen.scale_factor.md	Screen scale factor
+screen.size	references/api/screen.size.md	Screen size
+string.aes128_encrypt,string.aes128_decrypt	references/api/string.aes128.md	AES128 encrypt/decrypt
+string.atrim	references/api/string.atrim.md	Remove all whitespace
+string.base64_encode,string.base64_decode	references/api/string.base64.md	Base64 encode/decode
+string.compare_version	references/api/string.compare_version.md	Version comparison
+string.encode_uri,string.decode_uri,string.encode_uri_component,string.decode_uri_component	references/api/string.uri.md	URI encode/decode
+string.ends_with	references/api/string.ends_with.md	String suffix check
+string.from_gbk	references/api/string.from_gbk.md	GBK to UTF-8
+string.to_hex,string.from_hex	references/api/string.hex.md	Hex conversion
+string.hmac_sha1	references/api/string.hmac_sha1.md	HMAC-SHA1
+string.hmac_sha256	references/api/string.hmac_sha256.md	HMAC-SHA256
+string.lpad	references/api/string.lpad.md	Left-pad string
+string.ltrim	references/api/string.ltrim.md	Trim left whitespace
+string.md5	references/api/string.md5.md	String MD5
+string.random	references/api/string.random.md	Random string
+string.rpad	references/api/string.rpad.md	Right-pad string
+string.rtrim	references/api/string.rtrim.md	Trim right whitespace
+string.sha1	references/api/string.sha1.md	String SHA1
+string.split	references/api/string.split.md	Split by delimiter
+string.starts_with	references/api/string.starts_with.md	String prefix check
+string.strip_utf8_bom	references/api/string.strip_utf8_bom.md	Remove UTF-8 BOM
+string.trim	references/api/string.trim.md	Trim both ends
+sys.alert	references/api/sys.alert.md	Show system alert
+sys.available_memory	references/api/sys.available_memory.md	Available memory
+sys.cfversion	references/api/sys.cfversion.md	CoreFoundation version
+sys.ctlbyname	references/api/sys.ctlbyname.md	sysctl read
+sys.free_disk_space	references/api/sys.free_disk_space.md	Free storage
+sys.input_box	references/api/sys.input_box.md	Input prompt
+sys.input_text	references/api/sys.input_text.md	Input text
+sys.kill,sys.killall	references/api/sys.process_signal.md	Process signals
+sys.lchmod_r,sys.lchown_r,sys.lchownmod_r	references/api/sys.file_ownership.md	Recursively change permissions/owner
+sys.log	references/api/sys.log.md	System log
+sys.memory_info	references/api/sys.memory_info.md	Memory state
+sys.mgcopyanswer	references/api/sys.mgcopyanswer.md	Query system value
+sys.mkdir_p	references/api/sys.mkdir_p.md	Create directories recursively
+sys.msleep	references/api/sys.msleep.md	Millisecond delay
+sys.mtime	references/api/sys.mtime.md	Millisecond timestamp
+sys.net_time	references/api/sys.net_time.md	Network time
+sys.user_tracking,sys.set_user_tracking,sys.personalized_advertising,sys.set_personalized_advertising,sys.location_services,sys.set_location_services	references/api/sys.privacy.md	System privacy switches
+sys.rnd	references/api/sys.rnd.md	Random number
+sys.task	references/api/sys.task.md	Create a subprocess task
+sys.toast	references/api/sys.toast.md	Show toast text
+sys.version	references/api/sys.version.md	System version
+sys.xtversion	references/api/sys.xtversion.md	XXTouch version
+table.deep_copy	references/api/table.deep_copy.md	Deep-copy a table
+table.deep_dump,table.load_string	references/api/table.serialization.md	Table serialization/load
+thread.current_id	references/api/thread.current_id.md	Current task ID
+thread.dispatch	references/api/thread.dispatch.md	Dispatch task
+thread.kill	references/api/thread.kill.md	Remove task
+thread.register_event,thread.unregister_event	references/api/thread.event.md	Register/unregister event listener
+thread.samples	references/api/thread.samples.md	Thread sample code
+thread.wait	references/api/thread.wait.md	Wait for task completion
+touch.on,touch.move,touch.off,TouchObject:move,TouchObject:off,TouchObject:msleep,TouchObject:press,TouchObject:step_delay,TouchObject:step_len	references/api/touch.on.move.off.md	Touch down/move/wait/up
+touch.tap	references/api/touch.tap.md	Tap screen
+utils.add_contacts,utils.remove_all_contacts	references/api/utils.contacts.md	Add/clear contacts
+utils.date_from_format,utils.date_from_rfc1123,utils.date_from_rfc3339,utils.date_to_format,utils.date_to_rfc1123,utils.date_to_rfc3339	references/api/utils.date.md	Time format/RFC conversion
+utils.gen_uuid	references/api/utils.gen_uuid.md	Generate UUID
+utils.totp_next,utils.hotp_counter,utils.hotp_next	references/api/utils.otp.md	Generate TOTP/HOTP one-time passwords
+utils.is_launch_via_app	references/api/utils.is_launch_via_app.md	Detect launch from App
+utils.launch_args	references/api/utils.launch_args.md	Script launch arguments
+utils.qr_encode	references/api/utils.qr_encode.md	QR code encode
+utils.video_to_album	references/api/utils.video_to_album.md	Import video to album
+vpnconf.create,vpnconf.delete,vpnconf.list,vpnconf.select,vpnconf.connect,vpnconf.disconnect,vpnconf.status	references/api/vpnconf.md	VPN configuration/connection management
+webview.show,webview.hide,webview.destroy,webview.eval,webview.frame	references/api/webview.md	webview show/hide/destroy/evaluate JS/frame
+webview.samples	references/api/webview.samples.md	webview usage examples
+xxt-project,lua/scripts/main.lua,XXT_RES_PATH,XXT_HOME_PATH	references/xxt.md	XXT project structure
+xpp-package,Info.lua,Executable,MainInterfaceFile,BundleIdentifier	references/xpp.md	XPP project structure
+xpp.info,xpp.bundle_path,xpp.resource_path	references/api/xpp.runtime.md	XPP runtime information/paths
+xui.show,xui.dismiss,xui.reload,xui.setup,xui.get,xui.set,xui.read,xui.write,xui.clear	references/api/xui.md	XUI configuration UI/read/write

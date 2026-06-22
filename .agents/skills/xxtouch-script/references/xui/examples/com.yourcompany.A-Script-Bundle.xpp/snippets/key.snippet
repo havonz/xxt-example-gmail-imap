@@ -1,0 +1,13 @@
+return {
+    name = "Select Key";
+    arguments = {
+        {
+            type = "key";
+            subtitle = "Select a virtual key";
+            default = xui.get("com.yourcompany.A-Script-Bundle", "target_key");
+        };
+    };
+    generator = function(key)
+        return key
+    end;
+}
