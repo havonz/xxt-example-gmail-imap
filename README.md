@@ -4,6 +4,13 @@
 
 项目入口是 `lua/scripts/main.lua`。运行后会弹出配置窗口，填写 Gmail 邮箱、认证方式和读取数量，然后调用 `lua/scripts/gmail_imap.lua` 读取最近邮件，并在结果窗口中展示发件人、时间、主题、正文预览和附件信息。
 
+## 运行截图
+
+<p>
+  <img src="1.png" alt="Gmail IMAP 参数配置界面" width="320">
+  <img src="2.png" alt="Gmail IMAP 读取结果界面" width="320">
+</p>
+
 ## 项目结构
 
 ```text
